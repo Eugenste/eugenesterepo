@@ -4,28 +4,28 @@ package ua.training.model.entity;
  * Created by student on 04.10.2017.
  */
 public enum DBNoteBook {
-    NOTE_ONE("Taras", "taras123"),
-    NOTE_TWO("Nikola","nik12345"),
-    NOTE_THREE("Petro","shoko123");
+    NOTE_ONE("Taras", "Shevchenko"),
+    NOTE_TWO("Nikola","Tesld"),
+    NOTE_THREE("Elon","Musk");
 
     private final String firstName;
-    private final String login;
+    private final String lastName;
 
-    DBNoteBook(String firstName, String login) {
+    DBNoteBook(String firstName, String lastName) {
         this.firstName = firstName;
-        this.login = login;
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
         return firstName;
     }
-    public String getLogin() {
-        return login;
+    public String getLastName() {
+        return lastName;
     }
 
-    public static boolean checkLogin (String loginData){
+    public static boolean checkLastName (String lastNameData){
         for (DBNoteBook note : DBNoteBook.values()){
-            if (note.getLogin().equals(loginData)){return true;}
+            if (note.getLastName().equals(lastNameData)){return true;}
         }
         return  false;
     }
