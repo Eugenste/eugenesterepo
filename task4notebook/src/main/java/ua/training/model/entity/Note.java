@@ -1,5 +1,6 @@
 package ua.training.model.entity;
 
+import ua.training.view.TextConstantsForResources;
 import ua.training.view.View;
 
 import static ua.training.view.TextConstantsForResources.*;
@@ -59,15 +60,15 @@ public class Note {
     public void setGroup(String group) {
 
         switch (group){
-            case "friend":
-                this.group = Group.FRIENDS;
-                break;
-            case "work":
-                this.group = Group.WORK;
-                break;
-            case "family":
-                this.group = Group.FAMILY;
-                break;
+            case TextConstantsForResources.FRIENDS_GROUP:
+                                this.group = Group.FRIENDS;
+                                break;
+            case TextConstantsForResources.WORK_GROUP:
+                                this.group = Group.WORK;
+                                break;
+            case TextConstantsForResources.FAMILY_GROUP:
+                                this.group = Group.FAMILY;
+                                break;
             default:
                 this.group = Group.UNDEFINED;
         }
@@ -86,6 +87,6 @@ public class Note {
     }
 
     public void setComment(String comment) {
-        this.comment = this.comment;
+        this.comment = comment;
     }
 }

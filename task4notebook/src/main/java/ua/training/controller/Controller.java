@@ -1,12 +1,11 @@
 package ua.training.controller;
 
-import com.sun.org.apache.regexp.internal.RE;
+
 import ua.training.model.Model;
 import ua.training.view.View;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class Controller {
     private Model model;
@@ -21,6 +20,7 @@ public class Controller {
         Scanner scanner = new Scanner(System.in);
         InputNoteBook inputNoteBook = new InputNoteBook(view,scanner);
         inputNoteBook.inputNoteData();
+        inputNoteBook.setNoteData(model,view);
 
 
     }

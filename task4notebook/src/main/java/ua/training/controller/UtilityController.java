@@ -28,7 +28,7 @@ public class UtilityController {
         view.printMessage(message);
         String local = scanner.next();
         while (!checkValue(local,pattern)){
-            view.printMessage(WRONG_INPUT_DATA + message);
+            view.printMessage(view.printWrongInputData() + message);
             local = scanner.next();
         }
         return local;

@@ -1,6 +1,6 @@
 package ua.training.view;
 
-import sun.security.util.Resources_sv;
+
 
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -12,15 +12,15 @@ public class View {
 
     static String MESSAGES_BUNDLE_NAME = "messages";
     public static final ResourceBundle bundle = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME,
-                                                    new Locale("ua", "UA"));
+                                                    new Locale("en"));
 
 
-    public void printFirstNameInput(){
-        printMessage(bundle.getString(INPUT_FIRST_NAME));
+    public String printFirstNameInput(){
+        return bundle.getString(INPUT_FIRST_NAME);
     }
 
-    public void printWrongInputData(){
-        printMessage(bundle.getString(WRONG_INPUT_DATA));
+    public String printWrongInputData(){
+        return bundle.getString(WRONG_INPUT_DATA);
     }
 
     public void printMessage(String message){

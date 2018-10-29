@@ -22,7 +22,7 @@ public class FullName {
     }
 
     public String getFullNameInfo(){
-        return FIRST_NAME + getFirstName() + TAB + LAST_NAME + getLastName() + TAB + PATRONYMIC + TAB;
+        return FIRST_NAME + getFirstName() + TAB + LAST_NAME + getLastName() + TAB + PATRONYMIC + getPatronymic() + TAB;
 
     }
 

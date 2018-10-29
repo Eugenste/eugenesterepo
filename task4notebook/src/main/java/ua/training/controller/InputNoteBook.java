@@ -1,5 +1,6 @@
 package ua.training.controller;
 
+import ua.training.model.Model;
 import ua.training.view.View;
 
 import java.util.Scanner;
@@ -40,7 +41,7 @@ public class InputNoteBook {
         String str = (String.valueOf(View.bundle.getLocale()).equals("ua"))
                 ? REGEX_NAME_UKR : NAME_REGEX_EN;
 
-        this.firstName = utilityController.getCheckedValueWithRegex(scanner,Pattern.compile(str), INPUT_FIRST_NAME);
+        this.firstName = utilityController.getCheckedValueWithRegex(scanner,Pattern.compile(str), view.printFirstNameInput());
 
         this.lastName = utilityController.getCheckedValueWithRegex(scanner, NAME_REGEX, INPUT_LAST_NAME);
         this.patronymic = utilityController.getCheckedValueWithRegex(scanner, NAME_REGEX, INPUT_PATRONYMIC);
@@ -58,6 +59,12 @@ public class InputNoteBook {
 
 
 
+    }
+
+    public void setNoteData(Model model,View view){
+        model.setNote(firstName,lastName,patronymic,index,cityName,streetName,houseNumber,
+                                             flatNumber,group,phone,email,skype,comment);
+        view.printMessage(model.getNoteData());
     }
 
 

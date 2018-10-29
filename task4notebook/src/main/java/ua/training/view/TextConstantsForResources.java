@@ -21,7 +21,7 @@ public interface TextConstantsForResources {
     String INPUT_PHONE_NUMBER = "Input phone number: ";
     String INPUT_EMAIL = "Input email: ";
     String INPUT_SKYPE = "Input skype: ";
-    String INPUT_GROUP = "Choose the group: 1 - Family, 2 - Work, 3 - Friends.";
+    String INPUT_GROUP = "Choose the group: Family, Work, Friends.";
     String INPUT_COMMENT = "Input comment: ";
 
     String CREATED_NOTE = "Created note: ";
@@ -44,8 +44,8 @@ public interface TextConstantsForResources {
     String SKYPE = "Skype: ";
 
     String GROUP = "Group: ";
-    String FAMILY_GROUP = "Family group";
-    String WORK_GROUP = "Work group";
-    String FRIENDS_GROUP = "Friends group";
+    String FAMILY_GROUP = "family";
+    String WORK_GROUP = "work";
+    String FRIENDS_GROUP = "friend";
     String COMMENT = "Comment: ";
 }
