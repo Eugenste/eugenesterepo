@@ -12,7 +12,7 @@ public class View {
 
     static String MESSAGES_BUNDLE_NAME = "messages";
     public static final ResourceBundle bundle = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME,
-                                                    new Locale("en"));
+                                                    new Locale("ua"));
 
 
     public String printFirstNameInput(){

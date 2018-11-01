@@ -15,7 +15,10 @@ public class FullName {
         patronymic = NONE;
     }
 
-    public FullName(String firstName, String lastName, String patronymic) {
+    public FullName(String firstName, String lastName, String patronymic) throws NotUniqueLastNameException {
+        if (DBNoteBook.checkLastName(lastName)){
+            throw new NotUniqueLastNameException(ILLEGAL_LAST_NAME,lastName);
+        }
         this.firstName = firstName;
         this.lastName = lastName;
         this.patronymic = patronymic;

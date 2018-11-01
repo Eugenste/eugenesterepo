@@ -48,4 +48,6 @@ public interface TextConstantsForResources {
     String WORK_GROUP = "work";
     String FRIENDS_GROUP = "friend";
     String COMMENT = "Comment: ";
+
+    String ILLEGAL_LAST_NAME = "Illegal last name. Unique need to be entered";
 }

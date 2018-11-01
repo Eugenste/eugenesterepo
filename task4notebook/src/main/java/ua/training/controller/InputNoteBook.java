@@ -1,6 +1,7 @@
 package ua.training.controller;
 
 import ua.training.model.Model;
+import ua.training.model.entity.NotUniqueLastNameException;
 import ua.training.view.View;
 
 import java.util.Scanner;
@@ -61,7 +62,7 @@ public class InputNoteBook {
 
     }
 
-    public void setNoteData(Model model,View view){
+    public void setNoteData(Model model,View view) throws NotUniqueLastNameException {
         model.setNote(firstName,lastName,patronymic,index,cityName,streetName,houseNumber,
                                              flatNumber,group,phone,email,skype,comment);
         view.printMessage(model.getNoteData());

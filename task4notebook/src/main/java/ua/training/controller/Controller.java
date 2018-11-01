@@ -2,6 +2,7 @@ package ua.training.controller;
 
 
 import ua.training.model.Model;
+import ua.training.model.entity.NotUniqueLastNameException;
 import ua.training.view.View;
 
 import java.util.Scanner;
@@ -16,7 +17,7 @@ public class Controller {
         this.view = view;
     }
 
-    public void processUser(){
+    public void processUser() throws NotUniqueLastNameException {
         Scanner scanner = new Scanner(System.in);
         InputNoteBook inputNoteBook = new InputNoteBook(view,scanner);
         inputNoteBook.inputNoteData();
