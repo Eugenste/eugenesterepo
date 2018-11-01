@@ -26,5 +26,13 @@ public class App
         }
         System.out.println(result.entrySet());
 
+        ArrayListWithoutDelete<Integer> testIntegers = new ArrayListWithoutDelete<>();
+        testIntegers.addAll(integers);
+        System.out.println(testIntegers.size());
+        testIntegers.remove(4);
+        System.out.println(testIntegers.size());
+
+
+
     }
 }
