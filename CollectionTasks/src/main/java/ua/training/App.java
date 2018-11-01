@@ -13,8 +13,7 @@ public class App
     public static void main( String[] args )
     {
         Integer[] array = {4,5,-6,4,5,3,4,2,4,5,7};
-        ArrayList<Integer> integers = new ArrayList<>();
-        integers.addAll(Arrays.asList(array));
+        ArrayList<Integer> integers = new ArrayList<>(Arrays.asList(array));
         HashMap<Integer, Integer> result = new HashMap<>();
         for (Integer integer: integers) {
            if (result.keySet().contains(integer)){
