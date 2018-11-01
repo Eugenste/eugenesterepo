@@ -12,8 +12,12 @@ public class App
     {
         Integer[] array = {4,5,-6,4,5,3,4,2,4,5,7};
         List<Integer> integers = new ArrayList<>(Arrays.asList(array));
-        Map<Integer, Integer> result = new HashMap<>();
-        for (Integer integer: integers) {
+        final Map<Integer, Integer> result = new HashMap<>();
+        integers.forEach(integer ->{
+            result.putIfAbsent(integer,0);
+            result.computeIfPresent(integer, (key,value) -> ++value );
+        });
+     /*   for (Integer integer: integers) {
            if (result.keySet().contains(integer)){
                Integer tmp = result.get(integer);
                result.put(integer,++tmp);
@@ -21,7 +25,7 @@ public class App
                result.put(integer,1);
            }
 
-        }
+        }*/
         System.out.println(result.entrySet());
 
         List<Integer> testIntegers = new ArrayListWithoutDelete<>();
