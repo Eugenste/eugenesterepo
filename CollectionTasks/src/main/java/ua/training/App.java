@@ -1,8 +1,6 @@
 package ua.training;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * Hello world!
@@ -13,8 +11,8 @@ public class App
     public static void main( String[] args )
     {
         Integer[] array = {4,5,-6,4,5,3,4,2,4,5,7};
-        ArrayList<Integer> integers = new ArrayList<>(Arrays.asList(array));
-        HashMap<Integer, Integer> result = new HashMap<>();
+        List<Integer> integers = new ArrayList<>(Arrays.asList(array));
+        Map<Integer, Integer> result = new HashMap<>();
         for (Integer integer: integers) {
            if (result.keySet().contains(integer)){
                Integer tmp = result.get(integer);
@@ -26,7 +24,7 @@ public class App
         }
         System.out.println(result.entrySet());
 
-        ArrayListWithoutDelete<Integer> testIntegers = new ArrayListWithoutDelete<>();
+        List<Integer> testIntegers = new ArrayListWithoutDelete<>();
         testIntegers.addAll(integers);
         System.out.println(testIntegers.size());
         testIntegers.remove(4);
