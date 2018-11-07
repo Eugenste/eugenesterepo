@@ -21,6 +21,7 @@ public interface TextConstantsForResources {
     String CASH_METHOD = "payment.cash.data";
     String CASHLESS_METHOD = "payment.cashless.data";
     String NONE_METHOD = "payment.none.data";
+    String CITY_FROM = "city.from.data";
 
 
 }
