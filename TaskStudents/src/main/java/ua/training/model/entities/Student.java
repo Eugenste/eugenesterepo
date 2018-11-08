@@ -1,8 +1,10 @@
 package ua.training.model.entities;
 
 
+import ua.training.model.services.CalculateAverageMarkService;
+
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Comparator;
 import java.util.Map;
 
 
@@ -13,6 +15,9 @@ public abstract class Student {
     private String group;
     private PaymentMethod paymentMethod;
     private Map<String,BigDecimal> visitingSubjects;
+
+    public static final Comparator<Student> COMPARE_BY_AVERAGE_MARK =
+            Comparator.comparing(CalculateAverageMarkService::calculateAverageMarkPerStudent);
 
     public Student(String firstName, String lastName, String numberOfCource, String group,
                          PaymentMethod paymentMethod, Map<String,BigDecimal> visitingSubjects) {
@@ -71,6 +76,8 @@ public abstract class Student {
     public void setVisitingSubjects(Map<String, BigDecimal> visitingSubjects) {
         this.visitingSubjects = visitingSubjects;
     }
+
+
 
     public abstract String showInfo();
 

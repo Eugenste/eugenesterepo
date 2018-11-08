@@ -3,7 +3,6 @@ package ua.training.model.services;
 
 import ua.training.model.entities.PaymentMethod;
 import ua.training.model.entities.Student;
-import ua.training.model.entities.Subject;
 
 import java.math.BigDecimal;
 import java.util.List;
